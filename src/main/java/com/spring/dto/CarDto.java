@@ -18,6 +18,16 @@ public class CarDto {
         this.quantity = quantity;
     }
 
+
+    public String getRemain() {
+        return remain;
+    }
+
+    public void setRemain(String remain) {
+        this.remain = remain;
+    }
+
     private String floor;
     private String quantity;
+    private String remain;
 }

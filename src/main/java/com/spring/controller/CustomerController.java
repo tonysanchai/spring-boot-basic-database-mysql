@@ -1,6 +1,5 @@
 package com.spring.controller;
 
-import com.spring.dto.CarDto;
 import com.spring.dto.CustomerDto;
 import com.spring.service.CarService;
 import com.spring.service.CustomerService;
@@ -10,7 +9,7 @@ import org.springframework.web.bind.annotation.*;
 
 import java.util.List;
 
-
+@CrossOrigin
 @RestController
 @RequestMapping("/api")
 public class CustomerController {
@@ -36,10 +35,10 @@ public class CustomerController {
 
         return ResponseEntity.ok(customerService.getCustomer(customerDto));
     }
-    @RequestMapping(value = "/getCar", method = RequestMethod.GET)
-    public ResponseEntity<List<CarDto>> getCustomer(@ModelAttribute CarDto carDto) {
-
-        return ResponseEntity.ok(carService.getCar(carDto));
-
-    }
+//    @RequestMapping(value = "/getCar", method = RequestMethod.GET)
+//    public ResponseEntity<List<CarDto>> getCar(@ModelAttribute CarDto carDto) {
+//
+//        return ResponseEntity.ok(carService.getCar(carDto));
+//
+//    }
 }

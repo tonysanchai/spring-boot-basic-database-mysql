@@ -21,7 +21,11 @@ public class CarService {
 //        return customerDao.saveCustomer(customerDto,userName);
 //    }
 
-    public List<CarDto> getCar(CarDto carDto){
-        return carDao.findAllCar();
+    public List<CarDto> getAllCarParking(CarDto carDto){
+        return carDao.getAllCarParking();
+    }
+
+    public List<CarDto> getCarParkingByFloor(String floor){
+        return carDao.getCarParkingByFloor(floor);
     }
 }
